@@ -9,6 +9,29 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+
+ firebase: {
+    apiKey: "AIzaSyBMGt-rw9l1YQ87aEDkbQ590nHllT0uOAg",
+    authDomain: "artadysgouvfr.firebaseapp.com",
+    databaseURL: "https://artadysgouvfr.firebaseio.com",
+    projectId: "artadysgouvfr",
+    storageBucket: "artadysgouvfr.appspot.com",
+    messagingSenderId: "716658089584"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
+    torii: {
+      sessionServiceName: 'session'
+    },
+
+
+
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -25,25 +48,15 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    contentSecurityPolicy: {
-      'style-src': "'self' 'unsafe-inline'"
-    },
+  
 
     browserify: {
       tests: true
     },
 
-    torii: {
-      providers: {
-        'facebook-oauth2': {
-          apiKey: '631252926924840'
-        }
-      }
-    },
+    apiHost: 'https://artadysgouv.fr',
 
-    apiHost: 'http://localhost:4200',
-
-    googleClientID: '694766332436-1g5bakjoo5flkfpv3t2mfsch9ghg7ggd.apps.googleusercontent.com',
+    googleClientID: '716658089584-gmvkotob7s3i50l74i0t5hdgovgu06cc.apps.googleusercontent.com',
 
     fastboot: {
       hostWhitelist: [/^localhost:\d+$/]
